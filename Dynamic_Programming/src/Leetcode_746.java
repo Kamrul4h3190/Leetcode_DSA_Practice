@@ -1,26 +1,37 @@
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
 
 public class Leetcode_746 {
     public static void main(String[] args) {
         Leetcode_746 app = new Leetcode_746();
-        int[] cost = {10,15,20};
-        System.out.println("min cost : "+app.minCostClimbingStairs(cost));
+//        int[] nums = {2,2,3,3,4,3};
+//        int[] nums = {2,2,3,3,3,4};
+//        int[] nums = {3,4,2};
+        int[] nums = {1,1,1,2,4,5,5,5,6};
+        System.out.println("max earn : "+app.deleteAndEarn(nums));
     }
 
-    int[] memCost;
-    public int minCostClimbingStairs(int[] cost) {
-        memCost = new int[cost.length]; // Memoization array
-        Arrays.fill(memCost,-1);
-        return Math.min(minCost(0, cost), minCost(1, cost));
-    }
+    public int deleteAndEarn(int[] nums) {
+        HashMap<Integer,Integer> countingMap = new HashMap<>();
+        for (int num :nums) countingMap.put(num, countingMap.getOrDefault(num,0)+1);
 
-    private int minCost(int i,int[] cost) {
-        if(i>=cost.length) return 0;
-        if (memCost[i]!=-1) return memCost[i];
+        int earning = 0;
+        for (int i = 5; i < nums.length; i++) {
+            int localEarning = 0;
+            HashSet<Integer> set = new HashSet<>();
+            for (int j = 0; j < nums.length; j++) {
+                if (!set.contains(nums[j])){
+                    if( nums[j]!=nums[i]+1 &&  nums[j]!=nums[i]-1){
+                        localEarning +=  nums[j]*countingMap.get(nums[j]);
+//                        earning = Math.max(localEarning , earning);
+                    }
+                    set.add(nums[j]);
+                }
+            }
+            earning = Math.max(localEarning , earning);
+        }
 
-        int oneJump = cost[i] + minCost(i+1,cost);
-        int twoJump = cost[i] + minCost(i+2,cost);
-
-        return memCost[i] = Math.min(oneJump,twoJump);
+        return earning;
     }
 }
