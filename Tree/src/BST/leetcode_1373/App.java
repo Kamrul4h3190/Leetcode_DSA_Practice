@@ -15,40 +15,25 @@ public class App {
         return maxSum;
     }
     private Node postOrder(TreeNode root){
-//        if (root==null) return new Node(Integer.MIN_VALUE,0,Integer.MAX_VALUE);
-        if (root==null) return new Node(Integer.MAX_VALUE,0,Integer.MIN_VALUE);
-        Node left = postOrder(root.left);
-        Node right = postOrder(root.right);
+        if (root==null) return new Node(Integer.MAX_VALUE,0,Integer.MIN_VALUE);//back such that leaf validates as BST
+        Node leftNode = postOrder(root.left);
+        Node rightNode = postOrder(root.right);
 
-        if (root.val> left.rightVal && root.val < right.leftVal) {
-            int currSum = root.val + left.nodeSum + right.nodeSum;
+        if (root.val> leftNode.nodeMax && root.val < rightNode.nodeMin) {
+            int currSum = root.val +  leftNode.nodeSum + rightNode.nodeSum;
             maxSum = Math.max(maxSum,currSum);
-            int leftVal = Math.min(root.val, left.leftVal);
-            int rightVal = Math.max(root.val, right.rightVal);
-            return new Node(leftVal,rightVal,maxSum);
+            int nodeMin = Math.min(root.val, leftNode.nodeMin);//from right,convey to upward left
+            int nodeMax = Math.max(root.val, rightNode.nodeMax);//from left,convey to upward right
+            return new Node(nodeMin,currSum,nodeMax);
         }
-        int maxSum = Math.max(left.nodeSum,right.nodeSum);
-        return new Node(Integer.MIN_VALUE,maxSum,Integer.MAX_VALUE);
-
+        return new Node(Integer.MIN_VALUE,0,Integer.MAX_VALUE);//invalid BST
     }
     class Node{
-        int leftVal;int nodeSum;int rightVal;
-        public Node(int leftVal, int nodeSum, int rightVal) {
-            this.leftVal = leftVal;
+        int nodeMin;int nodeSum;int nodeMax;
+        public Node(int minVal, int nodeSum, int maxVal) {
+            this.nodeMin = minVal;
             this.nodeSum = nodeSum;
-            this.rightVal = rightVal;
+            this.nodeMax = maxVal;
         }
     }
-
 }
-//class Node{
-//    int leftMax;
-//    int nodeSum;
-//    int rightMin;
-//
-//    public Node(int leftMax, int nodeSum, int rightMin) {
-//        this.leftMax = leftMax;
-//        this.nodeSum = nodeSum;
-//        this.rightMin = rightMin;
-//    }
-//}
