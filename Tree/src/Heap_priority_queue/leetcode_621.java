@@ -6,7 +6,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.PriorityQueue;
 
-//failed.Not commited
 public class leetcode_621 {
     public static void main(String[] args) {
         leetcode_621 app = new leetcode_621();
