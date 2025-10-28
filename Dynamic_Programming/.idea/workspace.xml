@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="285ed336-4c41-47ff-b063-f8f33173b14a" name="Changes" comment="leetcode 740">
+    <list default="true" id="285ed336-4c41-47ff-b063-f8f33173b14a" name="Changes" comment="leetcode 403">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +58,23 @@
       <option name="project" value="LOCAL" />
       <updated>1761390731193</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="leetcode 3186">
+      <option name="closed" value="true" />
+      <created>1761580059661</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1761580059661</updated>
+    </task>
+    <task id="LOCAL-00003" summary="leetcode 403">
+      <option name="closed" value="true" />
+      <created>1761668031236</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1761668031236</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -73,6 +90,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="leetcode 740" />
-    <option name="LAST_COMMIT_MESSAGE" value="leetcode 740" />
+    <MESSAGE value="leetcode 3186" />
+    <MESSAGE value="leetcode 403" />
+    <option name="LAST_COMMIT_MESSAGE" value="leetcode 403" />
   </component>
 </project>
