@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="285ed336-4c41-47ff-b063-f8f33173b14a" name="Changes" comment="leetcode 638">
+    <list default="true" id="285ed336-4c41-47ff-b063-f8f33173b14a" name="Changes" comment="leetcode 1049">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -147,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762203673363</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="leetcode 1049">
+      <option name="closed" value="true" />
+      <created>1762278399892</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1762278399892</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -173,30 +181,7 @@
     <MESSAGE value="leetcode 123" />
     <MESSAGE value="leetcode 3148" />
     <MESSAGE value="leetcode 638" />
-    <option name="LAST_COMMIT_MESSAGE" value="leetcode 638" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Leetcode_1049.java</url>
-          <line>10</line>
-          <properties class="Leetcode_1049" method="lastStoneWeightII">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Leetcode_1049.java</url>
-          <line>17</line>
-          <properties class="Leetcode_1049" method="knapSack">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="leetcode 1049" />
+    <option name="LAST_COMMIT_MESSAGE" value="leetcode 1049" />
   </component>
 </project>
