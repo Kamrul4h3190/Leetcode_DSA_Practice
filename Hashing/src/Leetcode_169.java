@@ -8,11 +8,11 @@ public class Leetcode_169 {
     }
     public int majorityElement(int[] nums) {
         HashMap<Integer,Integer> freqMap = new HashMap<>(); //<number,freq>
-        for (int num : nums)
+        for (int num : nums)//build map
             freqMap.put(num, freqMap.getOrDefault(num,0)+1);
 
         int me = 0;    int n = nums.length;
-        int meThreshold = Math.floorDiv(n,2);
+        int meThreshold = Math.floorDiv(n,2);//search for more than threshold freq element
         for (Map.Entry<Integer,Integer> entry: freqMap.entrySet()){
             if (entry.getValue()>meThreshold)
                 me = entry.getKey();
