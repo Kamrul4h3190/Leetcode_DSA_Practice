@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="285ed336-4c41-47ff-b063-f8f33173b14a" name="Changes" comment="leetcode 300">
+    <list default="true" id="285ed336-4c41-47ff-b063-f8f33173b14a" name="Changes" comment="leetcode 902">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -182,7 +182,23 @@
       <option name="project" value="LOCAL" />
       <updated>1762358443716</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="leetcode 233">
+      <option name="closed" value="true" />
+      <created>1767737889284</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1767737889284</updated>
+    </task>
+    <task id="LOCAL-00018" summary="leetcode 902">
+      <option name="closed" value="true" />
+      <created>1767826791440</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1767826791440</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -211,6 +227,33 @@
     <MESSAGE value="leetcode 1049" />
     <MESSAGE value="leetcode 849" />
     <MESSAGE value="leetcode 300" />
-    <option name="LAST_COMMIT_MESSAGE" value="leetcode 300" />
+    <MESSAGE value="leetcode 233" />
+    <MESSAGE value="leetcode 902" />
+    <option name="LAST_COMMIT_MESSAGE" value="leetcode 902" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Leetcode_233.java</url>
+          <line>16</line>
+          <properties class="Leetcode_233" method="solve">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Leetcode_233.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Leetcode_233.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
