@@ -1,6 +1,3 @@
-import java.util.HashMap;
-import java.util.Map;
-
 public class Leetcode_233 {
     public static void main(String[] args) {
         Leetcode_233 app = new Leetcode_233();
@@ -10,22 +7,23 @@ public class Leetcode_233 {
     }
     public int countDigitOne(int n) {
         if (n==0) return 0;
+
         String number = Integer.toString(n);
-        return solve(0,true,0,number);
+        memStates = new Integer[number.length()][2][number.length()];//idx,isTight,Count1s
+        return digitDP(0,1,0,number);
     }
-    Map<String,Integer> idx1Counts = new HashMap<>();
-    private int solve(int i,boolean tight, int count1s,String number){
+    Integer[][][] memStates;
+    private int digitDP(int i, int tight, int count1s, String number){
         if (i==number.length()) return count1s;
-        String key = i+(tight ?"T":"F")+count1s;
-        if (idx1Counts.containsKey(key)) return idx1Counts.get(key);
+
+        if (memStates[i][tight][count1s]!=null) return memStates[i][tight][count1s];
 
         int total1s = 0;
-        int limit = tight ? number.charAt(i)-'0' : 9;
-        for (int digit = 0; digit <= limit; digit++) {//pass custom parameters, not edit globally
-            total1s += solve(i+1,  tight && digit==limit, digit==1 ? 1+count1s: count1s , number);
+        int lb = 0;
+        int up = tight==1 ? number.charAt(i)-'0' : 9;
+        for (int digit = lb; digit <= up; digit++) {//pass custom parameters, not edit globally
+            total1s += digitDP(i+1,  tight==1 && digit==up ? 1:0 , digit==1 ? 1+count1s: count1s , number);
         }
-
-        idx1Counts.put(key,total1s);
-        return total1s;
+        return memStates[i][tight][count1s] = total1s;
     }
 }
